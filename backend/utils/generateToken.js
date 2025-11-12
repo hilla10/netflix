@@ -7,7 +7,7 @@ export const generateTokenAndSetCookie = (userId, res) => {
   res.cookie('netflix-token', token, {
     maxAge: 7 * 24 * 60 * 60 * 1000, // 15 days in MS,
     httpOnly: true, // prevent XSS attacks cross-site scripting attacks, make it not be accessed by JS,
-    sameSite: 'strict', // CSRF attacks cross-site request forgery attacks
+    sameSite: 'none', // CSRF attacks cross-site request forgery attacks
     secure: ENV_VARS.NODE_ENV !== 'development',
   });
 
