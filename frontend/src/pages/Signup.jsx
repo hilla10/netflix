@@ -9,7 +9,7 @@ const Signup = () => {
   const [email, setEmail] = useState(emailParam || '');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const { signup } = useAuthStore();
+  const { signup,isSignedIn } = useAuthStore();
 
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -77,8 +77,9 @@ const Signup = () => {
               />
             </div>
 
-            <button className='w-full py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700'>
-              Sign Up
+            <button className='w-full py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700' disabled={isSignedIn}>
+              {isSignedIn ? 'Loading...' : "Sign Up"}
+              
             </button>
           </form>
 
