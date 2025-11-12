@@ -11,6 +11,11 @@
 
 ---
 
+## 📸 Screenshots
+ <img src="./frontend/public/screenshot.png" style=" border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.15); transition: transform 0.3s; cursor: pointer;" />
+
+---
+
 ## 🌟 Features
 
 | Feature | Description |
@@ -109,7 +114,6 @@ netflix-clone/
 │  └─ package.json
 └─ README.md
 ```
-## 📸 Screenshots
 
 ## 🤝 Contributing
 
