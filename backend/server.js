@@ -15,8 +15,17 @@ dotenv.config();
 await connectDB();
 
 const app = express();
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://netflix-alpha-gules.vercel.app",
+];
 
-app.use(cors({ credentials: true, origin: ENV_VARS.FRONTEND_URL }));
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
 const PORT = ENV_VARS.PORT;
