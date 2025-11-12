@@ -30,7 +30,6 @@
 | 🐱‍👤 Similar Content | Recommend similar movies/TV shows |
 | 💙 Landing Page | Modern interactive UI |
 | ✅ Deployment-ready | Vercel-ready frontend & backend setup |
-| 🚀 Project Management | Multi-workspace support & task management |
 
 ---
 
