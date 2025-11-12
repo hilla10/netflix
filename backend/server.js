@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
 import connectDB from './config/db.js';
 import authRouter from './routes/authRoute.js';
 import { ENV_VARS } from './config/envVars.js';
@@ -15,6 +16,7 @@ await connectDB();
 
 const app = express();
 
+app.use(cors({ credentials: true, origin: ENV_VARS.FRONTEND_URL }));
 app.use(express.json());
 app.use(cookieParser());
 const PORT = ENV_VARS.PORT;

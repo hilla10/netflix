@@ -1,9 +1,9 @@
 import { fetchFromTMDB } from '../services/tmdbService.js';
 
-export const getTrendingMovie = async (type, req, res) => {
+export const getTrendingMovie = async (req, res) => {
   try {
     const data = await fetchFromTMDB(
-      `https://api.themoviedb.org/3/trending/${type}/day?language=en-US`
+      `https://api.themoviedb.org/3/trending/movie/day?language=en-US`
     );
     const randomMovie =
       data.results[Math.floor(Math.random() * data.results?.length)];
